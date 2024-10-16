@@ -22,37 +22,17 @@ namespace Tyuiu.KhuzinaDR.Sprint2.Task5.V8
             Console.WriteLine("* предыдущего дня (принять, что n и m не характеризуют 1 января).         *");
             Console.WriteLine("*                                                                         *");
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
+            Console.WriteLine("*ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             Console.WriteLine("***************************************************************************");
-            // incorrect
-            string res;
-
-            Console.WriteLine("Введите месяц: ");
+            Console.WriteLine("Введите месяц:");
             int n = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("Введите день: ");
+            Console.WriteLine("Введите число:");
             int m = Convert.ToInt32(Console.ReadLine());
-
-
-
-            if (((n < 1) || (n > 12)) || ((m < 1) || (m > 31)))
-            {
-                res = "Eror 404";
-
-            }
-            else
-            {
-                res = "Предыдущая дата:" + ds.FindDateOfPreviousDay(m, n);
-            }
-
-
-
             Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
+            Console.WriteLine("*РЕЗУЛЬТАТ:                                                               *");
             Console.WriteLine("***************************************************************************");
-
-            Console.WriteLine(res);
-            Console.ReadKey();
+            Console.WriteLine(ds.FindDateOfPreviousDay(m, n));
+            Console.ReadLine();
 
         }
     }

@@ -8,11 +8,10 @@ namespace Tyuiu.KhuzinaDR.Sprint2.Task5.V8.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            int m = 1;
-            int n = 2;
-            string res = ds.FindDateOfPreviousDay(m, n);
-            string wait = "1";
-            Assert.AreEqual(wait, res);
+            int n = 11;
+            int m = 4;
+            var res = ds.FindDateOfPreviousDay(m, n);
+            Assert.AreEqual(10 + "." + 04, res);
         }
     }
 }
